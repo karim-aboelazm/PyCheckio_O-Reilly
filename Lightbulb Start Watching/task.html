@@ -1,0 +1,101 @@
+<h2>Lightbulb Start Watching</h2>
+<!-- Describe task in general -->
+<p>
+ <i>
+  This is the second mission in the lightbulb series. I will try to make each following task slightly more complex.
+ </i>
+</p>
+<p>
+ You have already learned how to count the amount of time a light bulb has been on, or how long a room has been lit. Now let's add one more parameter - the counting start time.
+</p>
+<p>
+ This means that the light continues to turn on and off as before. But now, as a result of the function, I want not only to know how long there was light in the room, but how long the room was lit, starting from a certain moment.
+</p>
+<p>
+ One more argument is added –
+ <b>
+  start_watching
+ </b>
+ , and if it’s not passed, we count as in the previous version of the program for the entire period.
+</p>
+<p class="for_info_only" style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2e34ec9ea1e240d7b48739762a2711c9/composition.gif" style="max-height: 400px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments and only the first one is required. The first one is a list of datetime objects and the second one is a datetime object.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A number of seconds as an integer.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 0, 10),
+],
+datetime(2015, 1, 12, 10, 0, 5)) == 5
+
+sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 0, 10),
+], datetime(2015, 1, 12, 10, 0, 0)) == 10
+
+sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 10, 10),
+    datetime(2015, 1, 12, 11, 0, 0),
+    datetime(2015, 1, 12, 11, 10, 10),
+], datetime(2015, 1, 12, 11, 0, 0)) == 610
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+</p>
+<ul>
+ <li>
+  <i>
+   The array of pressing the button is always sorted in ascending order
+  </i>
+ </li>
+ <li>
+  <i>
+   The array of pressing the button has no repeated elements
+  </i>
+ </li>
+ <li>
+  <i>
+   The amount of elements is always even (the light will eventually be off)
+  </i>
+ </li>
+ <li>
+  <i>
+   The minimum possible date is 1970-01-01
+  </i>
+ </li>
+ <li>
+  <i>
+   The maximum possible date is 9999-12-31
+  </i>
+ </li>
+</ul>
+
+<p><a href="https://py.checkio.org/mission/lightbulb-start-watching/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/lightbulb-start-watching">See the task on CheckiO</a></p>

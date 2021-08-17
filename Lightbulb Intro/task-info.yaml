@@ -1,0 +1,49 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from datetime import datetime\nfrom typing import List\n\ndef sum_light(els:\
+    \ List[datetime]) -> int:\n    time = 0\n    for i in range(len(els)//2):\n  \
+    \      time += (els[2 * i + 1] - els[2 * i]).total_seconds()\n    return int(time)\n\
+    \n\nif __name__ == '__main__':\n    print(\"Example:\")\n    print(sum_light([\n\
+    \        datetime(2015, 1, 12, 10, 0, 0),\n        datetime(2015, 1, 12, 10, 10\
+    \ , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015, 1,\
+    \ 12, 11, 10 , 10),\n    ]))\n    \n    # These \"asserts\" are used for self-checking\
+    \ and not for an auto-testing\n    assert sum_light(els=[\n        datetime(2015,\
+    \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n    ]) == 610\n\
+    \n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015,\
+    \ 1, 12, 10, 10 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+    \ 1, 12, 11, 10 , 10),\n    ]) == 1220\n\n    assert sum_light([\n        datetime(2015,\
+    \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n        datetime(2015,\
+    \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12, 11, 10 , 10),\n        datetime(2015,\
+    \ 1, 12, 11, 10 , 10),\n        datetime(2015, 1, 12, 12, 10 , 10),\n    ]) ==\
+    \ 4820\n\n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n\
+    \        datetime(2015, 1, 12, 10, 0 , 1),\n    ]) == 1\n\n    assert sum_light([\n\
+    \        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10,\
+    \ 0 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+    \ 1, 13, 11, 0 , 0),\n    ]) == 86410\n\n    print(\"The first mission in series\
+    \ is completed? Click 'Check' to earn cool rewards!\")\n\n"
+  learner_created: false
+status: Solved
+code: "from datetime import datetime\nfrom typing import List\n\ndef sum_light(els:\
+  \ List[datetime]) -> int:\n    time = 0\n    for i in range(len(els)//2):\n    \
+  \    time += (els[2 * i + 1] - els[2 * i]).total_seconds()\n    return int(time)\n\
+  \n\nif __name__ == '__main__':\n    print(\"Example:\")\n    print(sum_light([\n\
+  \        datetime(2015, 1, 12, 10, 0, 0),\n        datetime(2015, 1, 12, 10, 10\
+  \ , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12,\
+  \ 11, 10 , 10),\n    ]))\n    \n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\n    assert sum_light(els=[\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n    ]) == 610\n\
+  \n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 10, 10 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 11, 10 , 10),\n    ]) == 1220\n\n    assert sum_light([\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12, 11, 10 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 10 , 10),\n        datetime(2015, 1, 12, 12, 10 , 10),\n    ]) == 4820\n\
+  \n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 1),\n    ]) == 1\n\n    assert sum_light([\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 0 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 13, 11, 0 , 0),\n    ]) == 86410\n\
+  \n    print(\"The first mission in series is completed? Click 'Check' to earn cool\
+  \ rewards!\")\n\n"
+seconds_from_change: 4848

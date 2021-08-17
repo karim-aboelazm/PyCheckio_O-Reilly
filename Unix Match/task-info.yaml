@@ -1,0 +1,28 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def unix_match(filename: str, pattern: str) -> bool:\n\n    # your code here\n\
+    \    return filename == pattern\n\n\nif __name__ == '__main__':\n    print(\"\
+    Example:\")\n    print(unix_match('somefile.txt', '*'))\n    \n    # These \"\
+    asserts\" are used for self-checking and not for an auto-testing\n    assert unix_match('somefile.txt',\
+    \ '*') == True\n    assert unix_match('other.exe', '*') == True\n    assert unix_match('my.exe',\
+    \ '*.txt') == False\n    assert unix_match('log1.txt', 'log?.txt') == True\n \
+    \   assert unix_match('log1.txt', 'log[1234567890].txt') == True\n    assert unix_match('log12.txt',\
+    \ 'log?.txt') == False\n    assert unix_match('log12.txt', 'log??.txt') == True\n\
+    \    print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+feedback:
+  message: All tests passed
+  time: Mon, 16 Aug 2021 20:26:45 UTC
+code: "def unix_match(filename: str, pattern: str) -> bool:\n\n    # your code here\n\
+  \    return filename == pattern\n\n\nif __name__ == '__main__':\n    print(\"Example:\"\
+  )\n    print(unix_match('somefile.txt', '*'))\n    \n    # These \"asserts\" are\
+  \ used for self-checking and not for an auto-testing\n    assert unix_match('somefile.txt',\
+  \ '*') == True\n    assert unix_match('other.exe', '*') == True\n    assert unix_match('my.exe',\
+  \ '*.txt') == False\n    assert unix_match('log1.txt', 'log?.txt') == True\n   \
+  \ assert unix_match('log1.txt', 'log[1234567890].txt') == True\n    assert unix_match('log12.txt',\
+  \ 'log?.txt') == False\n    assert unix_match('log12.txt', 'log??.txt') == True\n\
+  \    print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 9223372036854775807

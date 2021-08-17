@@ -1,0 +1,131 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "# Taken from mission Lightbulb Intro\n\nfrom datetime import datetime\nfrom\
+    \ typing import List\n\ndef sum_light(els: List[datetime]) -> int:\n    time =\
+    \ 0\n    for i in range(len(els)//2):\n        time += (els[2 * i + 1] - els[2\
+    \ * i]).total_seconds()\n    return int(time)\n\n\nif __name__ == '__main__':\n\
+    \    print(\"Example:\")\n    print(sum_light([\n        datetime(2015, 1, 12,\
+    \ 10, 0, 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n        datetime(2015,\
+    \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12, 11, 10 , 10),\n    ]))\n \
+    \   \n    # These \"asserts\" are used for self-checking and not for an auto-testing\n\
+    \    assert sum_light(els=[\n        datetime(2015, 1, 12, 10, 0 , 0),\n     \
+    \   datetime(2015, 1, 12, 10, 10 , 10),\n    ]) == 610\n\n    assert sum_light([\n\
+    \        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10,\
+    \ 10 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+    \ 1, 12, 11, 10 , 10),\n    ]) == 1220\n\n    assert sum_light([\n        datetime(2015,\
+    \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n        datetime(2015,\
+    \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12, 11, 10 , 10),\n        datetime(2015,\
+    \ 1, 12, 11, 10 , 10),\n        datetime(2015, 1, 12, 12, 10 , 10),\n    ]) ==\
+    \ 4820\n\n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n\
+    \        datetime(2015, 1, 12, 10, 0 , 1),\n    ]) == 1\n\n    assert sum_light([\n\
+    \        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10,\
+    \ 0 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+    \ 1, 13, 11, 0 , 0),\n    ]) == 86410\n\n    print(\"The first mission in series\
+    \ is completed? Click 'Check' to earn cool rewards!\")\n\n\n\nfrom datetime import\
+    \ datetime\nfrom typing import List, Optional\n\n\ndef sum_light(els: List[datetime],\
+    \ start_watching: Optional[datetime] = None) -> int:\n    \"\"\"\n    how long\
+    \ the light bulb has been turned on\n    \"\"\"\n    return 0\n\n\nif __name__\
+    \ == \"__main__\":\n    print(\"Example:\")\n    print(\n        sum_light(\n\
+    \            [\n                datetime(2015, 1, 12, 10, 0, 0),\n           \
+    \     datetime(2015, 1, 12, 10, 0, 10),\n            ],\n            datetime(2015,\
+    \ 1, 12, 10, 0, 5),\n        )\n    )\n\n    assert (\n        sum_light(\n  \
+    \          els=[\n                datetime(2015, 1, 12, 10, 0, 0),\n         \
+    \       datetime(2015, 1, 12, 10, 0, 10),\n            ],\n            start_watching=datetime(2015,\
+    \ 1, 12, 10, 0, 5),\n        )\n        == 5\n    )\n\n    assert (\n        sum_light(\n\
+    \            [\n                datetime(2015, 1, 12, 10, 0, 0),\n           \
+    \     datetime(2015, 1, 12, 10, 0, 10),\n            ],\n            datetime(2015,\
+    \ 1, 12, 10, 0, 0),\n        )\n        == 10\n    )\n\n    assert (\n       \
+    \ sum_light(\n            [\n                datetime(2015, 1, 12, 10, 0, 0),\n\
+    \                datetime(2015, 1, 12, 10, 10, 10),\n                datetime(2015,\
+    \ 1, 12, 11, 0, 0),\n                datetime(2015, 1, 12, 11, 10, 10),\n    \
+    \        ],\n            datetime(2015, 1, 12, 11, 0, 0),\n        )\n       \
+    \ == 610\n    )\n\n    assert (\n        sum_light(\n            [\n         \
+    \       datetime(2015, 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12,\
+    \ 10, 10, 10),\n                datetime(2015, 1, 12, 11, 0, 0),\n           \
+    \     datetime(2015, 1, 12, 11, 10, 10),\n            ],\n            datetime(2015,\
+    \ 1, 12, 11, 0, 10),\n        )\n        == 600\n    )\n\n    assert (\n     \
+    \   sum_light(\n            [\n                datetime(2015, 1, 12, 10, 0, 0),\n\
+    \                datetime(2015, 1, 12, 10, 10, 10),\n                datetime(2015,\
+    \ 1, 12, 11, 0, 0),\n                datetime(2015, 1, 12, 11, 10, 10),\n    \
+    \        ],\n            datetime(2015, 1, 12, 10, 10, 0),\n        )\n      \
+    \  == 620\n    )\n\n    assert (\n        sum_light(\n            [\n        \
+    \        datetime(2015, 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12,\
+    \ 10, 10, 10),\n                datetime(2015, 1, 12, 11, 0, 0),\n           \
+    \     datetime(2015, 1, 12, 11, 10, 10),\n                datetime(2015, 1, 12,\
+    \ 11, 10, 11),\n                datetime(2015, 1, 12, 12, 10, 11),\n         \
+    \   ],\n            datetime(2015, 1, 12, 12, 10, 11),\n        )\n        ==\
+    \ 0\n    )\n\n    assert (\n        sum_light(\n            [\n              \
+    \  datetime(2015, 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12, 10,\
+    \ 10, 10),\n                datetime(2015, 1, 12, 11, 0, 0),\n               \
+    \ datetime(2015, 1, 12, 11, 10, 10),\n                datetime(2015, 1, 12, 11,\
+    \ 10, 11),\n                datetime(2015, 1, 12, 12, 10, 11),\n            ],\n\
+    \            datetime(2015, 1, 12, 12, 9, 11),\n        )\n        == 60\n   \
+    \ )\n\n    print(\"The second mission in series is done? Click 'Check' to earn\
+    \ cool rewards!\")\n"
+  learner_created: false
+status: Solved
+feedback:
+  message: All tests passed
+  time: Mon, 16 Aug 2021 23:18:31 UTC
+code: "# Taken from mission Lightbulb Intro\n\nfrom datetime import datetime\nfrom\
+  \ typing import List\n\ndef sum_light(els: List[datetime]) -> int:\n    time = 0\n\
+  \    for i in range(len(els)//2):\n        time += (els[2 * i + 1] - els[2 * i]).total_seconds()\n\
+  \    return int(time)\n\n\nif __name__ == '__main__':\n    print(\"Example:\")\n\
+  \    print(sum_light([\n        datetime(2015, 1, 12, 10, 0, 0),\n        datetime(2015,\
+  \ 1, 12, 10, 10 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 11, 10 , 10),\n    ]))\n    \n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\n    assert sum_light(els=[\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n    ]) == 610\n\
+  \n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 10, 10 , 10),\n        datetime(2015, 1, 12, 11, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 11, 10 , 10),\n    ]) == 1220\n\n    assert sum_light([\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 10 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 12, 11, 10 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 10 , 10),\n        datetime(2015, 1, 12, 12, 10 , 10),\n    ]) == 4820\n\
+  \n    assert sum_light([\n        datetime(2015, 1, 12, 10, 0 , 0),\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 1),\n    ]) == 1\n\n    assert sum_light([\n        datetime(2015,\
+  \ 1, 12, 10, 0 , 0),\n        datetime(2015, 1, 12, 10, 0 , 10),\n        datetime(2015,\
+  \ 1, 12, 11, 0 , 0),\n        datetime(2015, 1, 13, 11, 0 , 0),\n    ]) == 86410\n\
+  \n    print(\"The first mission in series is completed? Click 'Check' to earn cool\
+  \ rewards!\")\n\n\n\nfrom datetime import datetime\nfrom typing import List, Optional\n\
+  \n\ndef sum_light(els: List[datetime], start_watching: Optional[datetime] = None)\
+  \ -> int:\n    \"\"\"\n    how long the light bulb has been turned on\n    \"\"\"\
+  \n    return 0\n\n\nif __name__ == \"__main__\":\n    print(\"Example:\")\n    print(\n\
+  \        sum_light(\n            [\n                datetime(2015, 1, 12, 10, 0,\
+  \ 0),\n                datetime(2015, 1, 12, 10, 0, 10),\n            ],\n     \
+  \       datetime(2015, 1, 12, 10, 0, 5),\n        )\n    )\n\n    assert (\n   \
+  \     sum_light(\n            els=[\n                datetime(2015, 1, 12, 10, 0,\
+  \ 0),\n                datetime(2015, 1, 12, 10, 0, 10),\n            ],\n     \
+  \       start_watching=datetime(2015, 1, 12, 10, 0, 5),\n        )\n        == 5\n\
+  \    )\n\n    assert (\n        sum_light(\n            [\n                datetime(2015,\
+  \ 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12, 10, 0, 10),\n       \
+  \     ],\n            datetime(2015, 1, 12, 10, 0, 0),\n        )\n        == 10\n\
+  \    )\n\n    assert (\n        sum_light(\n            [\n                datetime(2015,\
+  \ 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12, 10, 10, 10),\n      \
+  \          datetime(2015, 1, 12, 11, 0, 0),\n                datetime(2015, 1, 12,\
+  \ 11, 10, 10),\n            ],\n            datetime(2015, 1, 12, 11, 0, 0),\n \
+  \       )\n        == 610\n    )\n\n    assert (\n        sum_light(\n         \
+  \   [\n                datetime(2015, 1, 12, 10, 0, 0),\n                datetime(2015,\
+  \ 1, 12, 10, 10, 10),\n                datetime(2015, 1, 12, 11, 0, 0),\n      \
+  \          datetime(2015, 1, 12, 11, 10, 10),\n            ],\n            datetime(2015,\
+  \ 1, 12, 11, 0, 10),\n        )\n        == 600\n    )\n\n    assert (\n       \
+  \ sum_light(\n            [\n                datetime(2015, 1, 12, 10, 0, 0),\n\
+  \                datetime(2015, 1, 12, 10, 10, 10),\n                datetime(2015,\
+  \ 1, 12, 11, 0, 0),\n                datetime(2015, 1, 12, 11, 10, 10),\n      \
+  \      ],\n            datetime(2015, 1, 12, 10, 10, 0),\n        )\n        ==\
+  \ 620\n    )\n\n    assert (\n        sum_light(\n            [\n              \
+  \  datetime(2015, 1, 12, 10, 0, 0),\n                datetime(2015, 1, 12, 10, 10,\
+  \ 10),\n                datetime(2015, 1, 12, 11, 0, 0),\n                datetime(2015,\
+  \ 1, 12, 11, 10, 10),\n                datetime(2015, 1, 12, 11, 10, 11),\n    \
+  \            datetime(2015, 1, 12, 12, 10, 11),\n            ],\n            datetime(2015,\
+  \ 1, 12, 12, 10, 11),\n        )\n        == 0\n    )\n\n    assert (\n        sum_light(\n\
+  \            [\n                datetime(2015, 1, 12, 10, 0, 0),\n             \
+  \   datetime(2015, 1, 12, 10, 10, 10),\n                datetime(2015, 1, 12, 11,\
+  \ 0, 0),\n                datetime(2015, 1, 12, 11, 10, 10),\n                datetime(2015,\
+  \ 1, 12, 11, 10, 11),\n                datetime(2015, 1, 12, 12, 10, 11),\n    \
+  \        ],\n            datetime(2015, 1, 12, 12, 9, 11),\n        )\n        ==\
+  \ 60\n    )\n\n    print(\"The second mission in series is done? Click 'Check' to\
+  \ earn cool rewards!\")\n"
+seconds_from_change: 9223372036854775807

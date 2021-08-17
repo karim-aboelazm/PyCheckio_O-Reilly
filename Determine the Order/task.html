@@ -1,0 +1,59 @@
+<h2>Determine the Order</h2>
+<p>
+ The Robots have found an encrypted message. We cannot decrypt it at the moment,
+    but we can take the first steps towards doing so. You have a set of "words", all in lower case, and each word contains
+    symbols in "alphabetical order". (it's not your typical alphabetical order, but a new and different order.)
+    We need to determine the order of the symbols from each "word" and create a single "word" with all of these symbols,
+    placing them in the new alphabetical order.
+    In some cases, if we cannot determine the order for several symbols, you should use the traditional
+ <a href="http://en.wikipedia.org/wiki/Classical_Latin_alphabet#Classical_Latin_alphabet">
+  latin alphabetical
+        order
+ </a>
+ .
+    For example:
+    Given words "acb", "bd", "zwa". As we can see "z" and "w" must be before "a"
+    and "d" after "b". So the result is "zwacbd".
+ <p>
+  <strong>
+   Input:
+  </strong>
+  Words as a list of strings.
+ </p>
+ <p>
+  <strong>
+   Output:
+  </strong>
+  The order as a string.
+ </p>
+ <div class="for_info_only">
+  <p>
+   <strong>
+    Example:
+   </strong>
+  </p>
+  <pre class="brush: python">checkio(["acb", "bd", "zwa"]) == "zwacbd"
+checkio(["klm", "kadl", "lsm"]) == "kadlsm"
+checkio(["a", "b", "c"]) == "abc"
+checkio(["aazzss"]) == "azs"
+checkio(["dfg", "frt", "tyg"]) == "dfrtyg"
+</pre>
+ </div>
+ <p class="for_info_only">
+  <strong>
+   How it is used:
+  </strong>
+  This concept can be useful for the cryptology,
+    helping you to find regularities and patterns in natural text and ciphered messages.
+ </p>
+ <p>
+  <strong>
+   Precondition:
+  </strong>
+  For each test, there can be the only one solution.
+  <br/>
+  0 &lt; |words| &lt; 10
+ </p>
+</p>
+<p><a href="https://py.checkio.org/mission/determine-the-order/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/determine-the-order">See the task on CheckiO</a></p>

@@ -1,0 +1,115 @@
+<h2>Lightbulb More</h2>
+<!-- Describe task in general -->
+<p>
+ The complication in the 6th mission of the series is that now there might be needed more than one light bulb to illuminate a room. And this is the 5th argument of the function - how many light bulbs are needed to illuminate the room.
+</p>
+<p>
+ For example, if you need 3 bulbs to illuminate a room, then we don’t count the time when there were only 2 bulbs or only one. If the last argument of the function is not passed, then one light bulb is enough to illuminate the room.
+</p>
+<p>
+ The task is still the same - to find out how long the room was lit (in this task, we can say - sufficiently lit).
+</p>
+<p class="for_info_only" style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/d3a28d3d1baa424f9670b061ca8dc1f1/composition.gif" style="max-height: 400px" title="example"/>
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Five arguments and only the first one is required. 
+    The first one
+ <i>
+  (els)
+ </i>
+ is a list of datetime objects (instead of datetime object there can be a tuple of two datetime and int), the second
+ <i>
+  (start_watching)
+ </i>
+ and the third ones
+ <i>
+  (end_watching)
+ </i>
+ are the datetime objects. The forth argument
+ <i>
+  (operating)
+ </i>
+ - timedelta object - how long the lamp can work. The 5th argument is a positive non-zero int.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A number of seconds as an integer.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">sum_light([
+    (datetime(2015, 1, 12, 10, 0, 10), 3),
+    datetime(2015, 1, 12, 10, 0, 20),
+    (datetime(2015, 1, 12, 10, 0, 30), 3),
+    (datetime(2015, 1, 12, 10, 0, 30), 2),
+    datetime(2015, 1, 12, 10, 0, 40),
+    (datetime(2015, 1, 12, 10, 0, 50), 2),
+], req=2) == 20
+
+sum_light([
+    (datetime(2015, 1, 12, 10, 0, 10), 3),
+    datetime(2015, 1, 12, 10, 0, 20),
+    (datetime(2015, 1, 12, 10, 0, 30), 3),
+    (datetime(2015, 1, 12, 10, 0, 30), 2),
+    datetime(2015, 1, 12, 10, 0, 40),
+    (datetime(2015, 1, 12, 10, 0, 50), 2),
+], req=3) == 0
+
+sum_light([
+    (datetime(2015, 1, 12, 10, 0, 10), 3),
+    datetime(2015, 1, 12, 10, 0, 20),
+    (datetime(2015, 1, 12, 10, 0, 30), 2),
+    (datetime(2015, 1, 12, 10, 0, 50), 3),
+    datetime(2015, 1, 12, 10, 0, 40),
+    (datetime(2015, 1, 12, 10, 0, 50), 2),
+], req=3) == 10
+</pre>
+ 
+</div>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+</p>
+<ul>
+ <li>
+  <i>
+   The array of pressing the button is always sorted in ascending order.
+  </i>
+ </li>
+ <li>
+  <i>
+   The array of pressing the button has no repeated elements.
+  </i>
+ </li>
+ <li>
+  <i>
+   The minimum possible date is 1970-01-01
+  </i>
+ </li>
+ <li>
+  <i>
+   The maximum possible date is 9999-12-31
+  </i>
+ </li>
+ <li>
+  <i>
+   req arguments is positive and non-zero
+  </i>
+ </li>
+</ul>
+
+<p><a href="https://py.checkio.org/mission/lightbulb-more/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/lightbulb-more">See the task on CheckiO</a></p>

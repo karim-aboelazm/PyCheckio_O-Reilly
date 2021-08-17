@@ -1,0 +1,76 @@
+<h2>Flatten a List</h2>
+<img class="for_info_only half" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/ef2a9e6360bd4ec7806b2451d7d6a742/title.png" style="float:left;max-height: 400px"/>
+<p>
+ Nicola likes to categorize all sorts of things.
+    He categorized a series of numbers and as the result of his efforts,
+    a simple sequence of numbers became a deeply-nested list.
+    Sophia and Stephan don't really understand his organization and need to figure out what it all means.
+    They need your help to understand Nikolas crazy list.
+</p>
+<p>
+ There is a list which contains integers or
+    other nested lists which may contain yet more lists and integers which then… you get the idea.
+    You should put all of the integer values into one flat list.
+    The order should be as it was in the original list with string representation from left to right.
+</p>
+<p>
+ We need to hide this program from Nikola by keeping it small and easy to hide.
+    Because of this,
+ <strong>
+  your code should be shorter than 140 characters (with whitespaces)
+ </strong>
+ .
+</p>
+<p>
+ <strong>
+  Input data:
+ </strong>
+ A nested list with integers.
+</p>
+<p>
+ <strong>
+  Output data:
+ </strong>
+ The one-dimensional list with integers.
+</p>
+<p>
+ <strong>
+  Example:
+  <br/>
+ </strong>
+</p>
+
+<pre class="brush: python">flat_list([1, 2, 3]) == [1, 2, 3]
+flat_list([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4]
+flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7]
+flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1]
+</pre>
+
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ This concept is useful for parsing and analyzing files with complex structures and
+    the task challenges your creativity in writing short code.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ 0 ≤ |array| ≤ 100
+ <br/>
+ ∀ x ∈ array : -2
+ <sup>
+  32
+ </sup>
+ &lt; x &lt; 2
+ <sup>
+  32
+ </sup>
+ or x is a list
+ <br/>
+ depth &lt; 10
+</p>
+
+<p><a href="https://py.checkio.org/mission/flatten-list/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/flatten-list">See the task on CheckiO</a></p>

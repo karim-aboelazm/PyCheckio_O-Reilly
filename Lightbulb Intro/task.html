@@ -1,0 +1,96 @@
+<h2>Lightbulb Intro</h2>
+<!-- Describe task in general -->
+<p>
+ <i>
+  With this mission I want to start a series of missions with light bulbs. They will help you understand the concept of processes and evaluation of the processes’ performance. Instead of light bulbs, in real life, there may be equipment, the effectiveness of which must be calculated, or workers who go to work, and their wages must be calculated.
+ </i>
+</p>
+<p>
+ The first mission is quite simple. There is a light bulb, which by default is off, and a button, by pressing which the light bulb switches its state. This means that if the light bulb is off and the button is pressed, the light turns on, and if you press it again, it turns off.
+</p>
+<p class="for_info_only">
+ <i>
+  (Everything is easy. I am sure that if you’ve got to this mission, you should understand, but just in case I’m adding a visual.)
+ </i>
+</p>
+<p class="for_info_only" style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/cdf543903da648acb1078eafa2750cea/composition.gif" style="max-height: 400px" title="example"/>
+</p>
+<p>
+ The function input is an array of datetime objects - this is the date and time of pressing the button. Your task is to determine how long the light bulb has been turned on.
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A list of datetime objects
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A number of seconds as an integer.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">sum_light([
+    datetime(2015, 1, 12, 10, 0 , 0),
+    datetime(2015, 1, 12, 10, 10 , 10),
+]) == 610
+
+sum_light([
+    datetime(2015, 1, 12, 10, 0 , 0),
+    datetime(2015, 1, 12, 10, 10 , 10),
+    datetime(2015, 1, 12, 11, 0 , 0),
+    datetime(2015, 1, 12, 11, 10 , 10),
+]) == 1220
+
+sum_light([
+    datetime(2015, 1, 12, 10, 0 , 0),
+    datetime(2015, 1, 12, 10, 0 , 1),
+]) == 1
+</pre>
+ 
+</div>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+</p>
+<ul>
+ <li>
+  <i>
+   The array of pressing the button is always sorted in ascending order
+  </i>
+ </li>
+ <li>
+  <i>
+   The array of pressing the button has no repeated elements (which means the result should always be bigger than 0)
+  </i>
+ </li>
+ <li>
+  <i>
+   The amount of elements is always even (the light will eventually be off)
+  </i>
+ </li>
+ <li>
+  <i>
+   The minimum possible date is 1970-01-01
+  </i>
+ </li>
+ <li>
+  <i>
+   The maximum possible date is 9999-12-31
+  </i>
+ </li>
+</ul>
+
+<p><a href="https://py.checkio.org/mission/lightbulb-intro/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/lightbulb-intro">See the task on CheckiO</a></p>

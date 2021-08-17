@@ -1,0 +1,24 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from typing import Iterable\n\ndef median_three(els: Iterable[int]) -> Iterable[int]:\n\
+    \    # your code here\n    return []\n\n\nif __name__ == '__main__':\n    print(\"\
+    Example:\")\n    print(list(median_three([1, 2, 3, 4, 5, 6, 7])))\n    \n    #\
+    \ These \"asserts\" are used for self-checking and not for an auto-testing\n \
+    \   assert list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]\n\
+    \    assert list(median_three([1])) == [1]\n    print(\"Coding complete? Click\
+    \ 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+feedback:
+  message: All tests passed
+  time: Mon, 16 Aug 2021 19:57:49 UTC
+code: "from typing import Iterable\n\ndef median_three(els: Iterable[int]) -> Iterable[int]:\n\
+  \    # your code here\n    return []\n\n\nif __name__ == '__main__':\n    print(\"\
+  Example:\")\n    print(list(median_three([1, 2, 3, 4, 5, 6, 7])))\n    \n    # These\
+  \ \"asserts\" are used for self-checking and not for an auto-testing\n    assert\
+  \ list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]\n    assert\
+  \ list(median_three([1])) == [1]\n    print(\"Coding complete? Click 'Check' to\
+  \ earn cool rewards!\")\n"
+seconds_from_change: 9223372036854775807

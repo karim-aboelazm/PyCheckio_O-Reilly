@@ -1,0 +1,96 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: |
+    from collections import Counter
+    from typing import List
+
+
+    def frequency_sorting(numbers: List[int]) -> List[int]:
+        numbers.sort()
+        counter = Counter(numbers)
+        result = []
+
+        for key, value in counter.most_common():
+            result.extend(key for _ in range(value))
+
+        return result
+
+
+    if __name__ == "__main__":
+        print("Example:")
+        print(frequency_sorting([1, 2, 3, 4, 5]))
+
+        # These "asserts" using only for self-checking and not necessary for auto-testing
+        assert frequency_sorting([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5], "Already sorted"
+        assert frequency_sorting([3, 4, 11, 13, 11, 4, 4, 7, 3]) == [
+            4,
+            4,
+            4,
+            3,
+            3,
+            11,
+            11,
+            7,
+            13,
+        ], "Not sorted"
+        assert frequency_sorting([99, 99, 55, 55, 21, 21, 10, 10]) == [
+            10,
+            10,
+            21,
+            21,
+            55,
+            55,
+            99,
+            99,
+        ], "Reversed"
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+  learner_created: false
+status: Solved
+code: |
+  from collections import Counter
+  from typing import List
+
+
+  def frequency_sorting(numbers: List[int]) -> List[int]:
+      # numbers.sort()
+      # counter = Counter(numbers)
+      # result = []
+      #
+      # for key, value in counter.most_common():
+      #     result.extend(key for _ in range(value))
+      #
+      # return result
+      return sorted(sorted(numbers), key=lambda x: numbers.count(x), reverse=True)
+
+
+  if __name__ == "__main__":
+      print("Example:")
+      print(frequency_sorting([1, 2, 3, 4, 5]))
+
+      # These "asserts" using only for self-checking and not necessary for auto-testing
+      assert frequency_sorting([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5], "Already sorted"
+      assert frequency_sorting([3, 4, 11, 13, 11, 4, 4, 7, 3]) == [
+          4,
+          4,
+          4,
+          3,
+          3,
+          11,
+          11,
+          7,
+          13,
+      ], "Not sorted"
+      assert frequency_sorting([99, 99, 55, 55, 21, 21, 10, 10]) == [
+          10,
+          10,
+          21,
+          21,
+          55,
+          55,
+          99,
+          99,
+      ], "Reversed"
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+seconds_from_change: 2956
